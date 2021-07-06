@@ -1,0 +1,20 @@
+{
+	"root": true, // will look for config/parent folder up to root directory
+	"extends": [ // rules & plugins
+		"eslint:recommended", // *** run "npm run lint -- --watch" for a live linting watch ... or check scripts in package.json
+		"plugin:import/errors",
+		"plugin:import/warnings"
+	],
+	"parserOptions": { // ES options
+		"ecmaVersion": 7,
+		"sourceType": "module"
+	},
+	"env": { // declares environment that eslint should be aware of
+		"browser": true,
+		"node": true,
+		"mocha": true
+	},
+	"rules": { // define any rules we wish to override
+		"no-console": 1 // 1 means warning, 2 means error, 0 means off
+	}
+}
